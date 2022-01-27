@@ -125,7 +125,7 @@ form.sign-in-form {
 }
 
 /*Boton Login*/ 
-.btn:hover {
+.btn:--white {
   background-color: #000;
 }
 .panels-container {
