@@ -123,6 +123,7 @@ form.sign-in-form {
   cursor: pointer;
   transition: 0.5s;
 }
+
 /*Boton Login*/ 
 .btn:hover {
   background-color: #000;
@@ -136,6 +137,7 @@ form.sign-in-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
 /*Circulo*/ 
 .container:before {
   content: "";
@@ -172,8 +174,7 @@ form.sign-in-form {
 
 .right-panel {
   pointer-events: none;
-  padding: 10% 20% 65vh 10%;
-
+  padding: 10% 30% 40% 10%;
 }
 
 .panel .content {
@@ -185,7 +186,7 @@ form.sign-in-form {
 .panel h3 {
   font-weight: 600;
   line-height: 1;
-  font-size: 1.5rem;
+  font-size: 180%;
 }
 
 .panel p {
@@ -208,8 +209,7 @@ form.sign-in-form {
   transform: translateX(800px);
 }
 
-/* ANIMATION */
-
+/* animação */
 .container.sign-up-mode:before {
   transform: translate(100%, -50%);
   right: 52%;
@@ -246,10 +246,11 @@ form.sign-in-form {
 .container.sign-up-mode .right-panel {
   pointer-events: all;
 }
+
 /* parte resposividade */
 @media (min-width: 870px){
   .left-panel {
-    padding: 10% 10vh 65vh 5vh;
+    padding: 10% 40% 50% 10%;
   }
 }
 @media (max-width: 870px) {
@@ -262,7 +263,7 @@ form.sign-in-form {
     top: 95%;
     transform: translate(-50%, -100%);
     transition: 1s 0.8s ease-in-out;
-  }
+   }
 
   .signin-signup,
   .container.sign-up-mode .signin-signup {
@@ -288,9 +289,7 @@ form.sign-in-form {
 
   .left-panel {
     grid-row: 1 / 2;
-    padding: 10% 15% 10% 15%;
-
-  }
+    padding: 10% 15% 10% 15%;}
 
   .image {
     width: 200px;
@@ -304,7 +303,7 @@ form.sign-in-form {
   }
 
   .panel h3 {
-    font-size: 1.2rem;
+    font-size: 150%;
   }
 
   .panel p {
@@ -353,17 +352,18 @@ form.sign-in-form {
   .container.sign-up-mode .signin-signup {
     top: 5%;
     transform: translate(-50%, 0);
-  }
-}
-@media screen and (min-width: 910px) {
-  
-}
+  }}
+
+ /* celular */
 @media (max-width: 570px) {
   form {
     padding: 0 1.5rem;
   }
+  .right-panel {
+    padding: 10% 12% 30% 12%;
+  }
   .left-panel{
-    padding: 10% 12% 10% 12%;
+    padding: 30% 12% 10% 12%;
   }
   .image {
     display: none;
@@ -376,12 +376,12 @@ form.sign-in-form {
   }
 
   .container:before {
-    bottom: 72%;
+    bottom: 60%;
     left: 50%;
   }
 
   .container.sign-up-mode:before {
-    bottom: 28%;
+    bottom: 40%;
     left: 50%;
   }
 }
