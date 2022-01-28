@@ -30,7 +30,7 @@ html {
   --box: #8b645b;
 }
 
-.input[type=checkbox]{
+input[type=checkbox]{
   height: 0;
   width: 0;
   padding: 2px 2px 2px 2px;
