@@ -6,6 +6,89 @@
   box-sizing: border-box;
 }
 
+
+html {
+  border: none;
+  background-color: var(--white);
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+
+  --title: #444;
+  --input: #f0f0f0;
+  --input-f: #acacac;
+  --input-f-i: #333;
+  --nav: #fff;
+  --bg: #69443C;
+  --bg-box: #ddc4a1;
+  --color-button: #fcfcfc;
+  --color-text: #333333;
+  --white: #fff;
+  --black: #000;
+  --brown: #8b645b;
+  --icon: #fff;
+  --box: #8b645b;
+}
+
+.input[type=checkbox]{
+  height: 0;
+  width: 0;
+  padding: 2px 2px 2px 2px;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: var(--bg);
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label::after{
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.input:checked + label {
+  background-color: var(--color-button);
+}
+
+.input:checked + label::after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+.pulsate {
+  -webkit-animation: pulsate 2s ease-out;
+  -webkit-animation-duration: infinite;
+  opacity: 0.8;
+}
+@-webkit-keyframes pulsate {
+  0% {
+      opacity: 0.2;
+  }
+  50% {
+      opacity: 1.0;
+  }
+  100% {
+      opacity: 0.2;
+  }
+}
+
 body,
 input {
   font-family: "Poppins", sans-serif;
@@ -14,7 +97,7 @@ input {
 .container {
   position: relative;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--nav);
   min-height: 100vh;
   overflow: hidden;
 }
@@ -62,14 +145,14 @@ form.sign-in-form {
 
 .title {
   font-size: 2.2rem;
-  color: #444;
+  color: var(--title);
   margin-bottom: 10px;
 }
 
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: var(--input);
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -82,7 +165,7 @@ form.sign-in-form {
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #acacac;
+  color: var(--input-f);
   transition: 0.5s;
   font-size: 1.1rem;
 }
@@ -94,7 +177,7 @@ form.sign-in-form {
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #333;
+  color: var(--input-f-i);
 }
 
 .input-field input::placeholder {
@@ -111,12 +194,12 @@ form.sign-in-form {
 /*Boton Login*/ 
 .btn {
   width: 150px;
-  background-color: #69443C;
+  background-color: var(--bg);
   border: none;
   outline: none;
   height: 49px;
   border-radius: 49px;
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
@@ -126,7 +209,7 @@ form.sign-in-form {
 
 /*Boton Login*/ 
 .btn:--white {
-  background-color: #000;
+  background-color: var(--black);
 }
 .panels-container {
   position: absolute;
@@ -178,7 +261,7 @@ form.sign-in-form {
 }
 
 .panel .content {
-  color: #fff;
+  color: var(--white);
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
 }
@@ -197,7 +280,7 @@ form.sign-in-form {
 .btn.transparent {
   margin: 0;
   background: none;
-  border: 2px solid #fff;
+  border: 2px solid var(--white);
   width: 130px;
   height: 41px;
   font-weight: 600;

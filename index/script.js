@@ -16,7 +16,8 @@ const initialColors = {
   white: getStyle(html, "--white"),
   black: getStyle(html, "--black"),
   brown: getStyle(html, "--brown"),
-  icon: getStyle(html, "--icon")
+  icon: getStyle(html, "--icon"),
+  box: getStyle(html, "--box"),
   //pegar este estilo do CSS
 }
 
@@ -25,12 +26,13 @@ const darkMode = {
   bg:"#fff",
   bgBox: "#000",
   colorHeadings: "#fff",
-  colorButton: "#000",
+  colorButton: "#777777",
   colorText: "#fff",
   white: "#303030",
   black: "#fff",
   brown: "#fff",
-  icon: "#777777",
+  icon: "#fff",
+  box: "#777777"
 }
 
 const transformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
@@ -44,3 +46,5 @@ const changeColors = (colors) => {
 checkbox.addEventListener("change", ({target}) => {
   target.checked ? changeColors(darkMode) : changeColors(initialColors)
 })
+
+
