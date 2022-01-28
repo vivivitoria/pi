@@ -7,10 +7,10 @@
 }
 
 html {
+    border: none;
+    background-color: var(--white);
+    font-family: 'Nunito', sans-serif;
     height: 100%;
-    font-family: 'Ubuntu';
-
-    display: grid;
     align-items: center;
     justify-items: center;
 
@@ -23,11 +23,7 @@ html {
     --white: #fff;
     --black: #000;
     --brown: #8b645b;
-}
-
-body {
-    background-color: var(--white);
-    font-family: 'Nunito', sans-serif;
+    --icon: #000;
 }
 
 h1 {
@@ -53,7 +49,7 @@ label {
     text-indent: -9999px;
     width: 52px;
     height: 27px;
-    background: grey;
+    background: var(--bg);
     float: right;
     border-radius: 100px;
     position: relative;
@@ -104,6 +100,8 @@ label:active:after {
     min-height: 100vh;
     padding: 3rem 5rem 0 3rem;
     position: relative;
+    border: none;
+    background-color: var(--white);
 }
 .section1::before {
     content: '';
@@ -131,12 +129,12 @@ button .login {
 .icon-login {
     height: 100%;
     background-color: var(--white);
-    color: var(--black);
+    color: var(--icon);
 }
 .icon-login:--white {
     width: 70%;
     height: 100%;
-    background-color: var(--black);
+    background-color: var(--icon);
     color: var(--white);
 }
 .section-title {
@@ -173,7 +171,7 @@ button .login {
     position: absolute;
     height: 80px;
     width: 80px;
-    background-color: var(--black);
+    background-color: var(--icon);
     text-align: center;
     color: var(--white);
     line-height: 80px;

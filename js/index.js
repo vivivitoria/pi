@@ -16,19 +16,21 @@ const initialColors = {
   white: getStyle(html, "--white"),
   black: getStyle(html, "--black"),
   brown: getStyle(html, "--brown"),
+  icon: getStyle(html, "--icon")
   //pegar este estilo do CSS
 }
 
 const darkMode = {
   background: "#000",
-  bg:"#333333",
+  bg:"#fff",
   bgBox: "#000",
   colorHeadings: "#fff",
-  colorButton: "#777777",
-  colorText: "#B5B5B5",
-  white: "#dddddd",
+  colorButton: "#000",
+  colorText: "#fff",
+  white: "#303030",
   black: "#fff",
-  brown: "#7777777",
+  brown: "#fff",
+  icon: "#777777",
 }
 
 const transformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
