@@ -8,6 +8,7 @@ const getStyle = (element, style) =>
     .getPropertyValue(style)
 
 const initialColors = {
+  title: getStyle(html, "--title"),
   background: getStyle(html, "--background"),
   bg: getStyle(html, "--bg"),
   bgBox: getStyle(html, "--bg-box"),
@@ -18,21 +19,24 @@ const initialColors = {
   brown: getStyle(html, "--brown"),
   icon: getStyle(html, "--icon"),
   box: getStyle(html, "--box"),
+  input: getStyle (html, "--input"),
   //pegar este estilo do CSS
 }
 
 const darkMode = {
+  input: "#777777",
+  title: "#fff",
   background: "#000",
-  bg:"#fff",
+  bg:"#000",
   bgBox: "#000",
   colorHeadings: "#fff",
   colorButton: "#777777",
   colorText: "#fff",
-  white: "#303030",
+  white: "#525252",
   black: "#fff",
   brown: "#fff",
   icon: "#fff",
-  box: "#777777"
+  box: "#303030",
 }
 
 const transformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()

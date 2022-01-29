@@ -10,15 +10,17 @@
 html {
   border: none;
   background-color: var(--white);
-  height: 100%;
+  height: auto;
   align-items: center;
   justify-items: center;
 
   --title: #444;
   --input: #f0f0f0;
   --input-f: #acacac;
+  --text-input: #aaa;
   --input-f-i: #333;
   --nav: #fff;
+  --background: #fff;
   --bg: #69443C;
   --bg-box: #ddc4a1;
   --color-button: #fcfcfc;
@@ -26,16 +28,14 @@ html {
   --white: #fff;
   --black: #000;
   --brown: #8b645b;
-  --icon: #fff;
-  --box: #8b645b;
+  --color-text-container: #fff;
 }
 
-input[type=checkbox]{
-  height: 0;
-  width: 0;
-  padding: 2px 2px 2px 2px;
-  visibility: hidden;
+
+ html, body, main {
+	 height: 100%;
 }
+
 
 label {
   cursor: pointer;
@@ -60,11 +60,11 @@ label::after{
   transition: 0.3s;
 }
 
-.input:checked + label {
+input:checked + label {
   background-color: var(--color-button);
 }
 
-.input:checked + label::after {
+input:checked + label::after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
 }
@@ -72,34 +72,32 @@ label::after{
 label:active:after {
   width: 45px;
 }
-.pulsate {
-  -webkit-animation: pulsate 2s ease-out;
-  -webkit-animation-duration: infinite;
-  opacity: 0.8;
+ main {
+	 position: relative;
+	 transition: all 0.5s ease-in-out;
 }
-@-webkit-keyframes pulsate {
-  0% {
-      opacity: 0.2;
-  }
-  50% {
-      opacity: 1.0;
-  }
-  100% {
-      opacity: 0.2;
-  }
+ .absolute-center {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+}
+ .theme__checkbox {
+	 display: none;
+}
+ .theme__button {
+	 position: fixed;
+	 bottom: 0;
+	 right: 0;
+	 margin: 1.2rem;
+	 z-index: 1;
+	 cursor: pointer;
+   transform: translateY(-50%);
 }
 
 body,
 input {
   font-family: "Poppins", sans-serif;
-}
-
-.container {
-  position: relative;
-  width: 100%;
-  background-color: var(--nav);
-  min-height: 100vh;
-  overflow: hidden;
 }
 
 .forms-container {
@@ -181,7 +179,7 @@ form.sign-in-form {
 }
 
 .input-field input::placeholder {
-  color: #aaa;
+  color: var(--text-input);
   font-weight: 500;
 }
 
@@ -190,8 +188,7 @@ form.sign-in-form {
   font-size: 1rem;
 }
 
-
-/*Boton Login*/ 
+/* botão Login*/ 
 .btn {
   width: 150px;
   background-color: var(--bg);
@@ -199,7 +196,7 @@ form.sign-in-form {
   outline: none;
   height: 49px;
   border-radius: 49px;
-  color: var(--white);
+  color: var(--color-text-container);
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
@@ -207,7 +204,6 @@ form.sign-in-form {
   transition: 0.5s;
 }
 
-/*Boton Login*/ 
 .btn:--white {
   background-color: var(--black);
 }
@@ -221,7 +217,16 @@ form.sign-in-form {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/*Circulo*/ 
+/* círculo */ 
+
+.container {
+  position: relative;
+  width: 100%;
+  background-color: var(--white);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 .container:before {
   content: "";
   position: absolute;
@@ -261,7 +266,7 @@ form.sign-in-form {
 }
 
 .panel .content {
-  color: var(--white);
+  color: var(--color-text-container);
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
 }
@@ -280,7 +285,7 @@ form.sign-in-form {
 .btn.transparent {
   margin: 0;
   background: none;
-  border: 2px solid var(--white);
+  border: 2px solid var(--color-text-container);
   width: 130px;
   height: 41px;
   font-weight: 600;
