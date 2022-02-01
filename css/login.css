@@ -39,6 +39,21 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
+
+.btn-back{
+  font-size:20px;
+  padding:10px;
+  width:150px;
+}
+.btn-back a{
+  text-decoration: none;
+  padding:20px;
+  color:#69443C;
+}
+.btn-back a:hover{
+  color:#D1B692;
+}
+
 .forms-container {
   position: absolute;
   width: 100%;
