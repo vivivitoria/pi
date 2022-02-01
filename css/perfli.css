@@ -12,14 +12,6 @@ html {
     background-image: url(../midia/bglo.png);
 }
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
 .btn-back{
     font-size:20px;
     padding:10px;
@@ -54,15 +46,22 @@ body{
 
 }
 
+div {
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 #main-container{
     width:60%;
-    margin-left:auto;
-    margin-right:auto;
     background-color:#fff;
     border-radius:10px;
     padding:25px;
-    margin-bottom:30px;
 }
 #main-container h1{
     text-align:center;
