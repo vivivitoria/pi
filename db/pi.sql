@@ -2,8 +2,7 @@ CREATE DATABASE IF NOT EXISTS pi:
 
 -- ************************************** `usuario`
 
-CREATE TABLE `usuario`
-(
+CREATE TABLE IF NOT EXISTS `usuario` (
  `user_id`     int NOT NULL AUTO_INCREMENT ,
  `user_nome`   text NOT NULL ,
  `cidade_id`      int NOT NULL ,
@@ -17,9 +16,7 @@ CONSTRAINT `FK_113` FOREIGN KEY `FK_115` (`cidade_id`) REFERENCES `cidade` (`cid
 );
 
 -- ************************************** `livro`
-
-CREATE TABLE `livro`
-(
+CREATE TABLE IF NOT EXISTS `livro` (
  `livro_id`       int NOT NULL AUTO_INCREMENT ,
  `user_id`     int NOT NULL ,
  `livro_nome`     text NOT NULL ,
@@ -35,8 +32,7 @@ CONSTRAINT `FK_58` FOREIGN KEY `FK_60` (`user_id`) REFERENCES `usuario` (`user_i
 
 -- ************************************** `estados`
 
-CREATE TABLE `estados`
-(
+CREATE TABLE IF NOT EXISTS `estado` (
  `estado_id`   int NOT NULL AUTO_INCREMENT ,
  `cidade_id`   int NOT NULL ,
  `estado_nome` text NOT NULL ,
@@ -50,8 +46,8 @@ CONSTRAINT `FK_73` FOREIGN KEY `FK_75` (`cidade_id`) REFERENCES `cidade` (`cidad
 
 -- ************************************** `cidade`
 
-CREATE TABLE `cidade`
-(
+CREATE TABLE IF NOT EXISTS `cidade` (
+
  `cidade_id`   int NOT NULL AUTO_INCREMENT ,
  `cidade_nome` text NOT NULL ,
 
