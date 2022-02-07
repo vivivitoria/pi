@@ -3,7 +3,7 @@ $nome = $_POST['nome'];
 $login = $_POST['login'];
 $entrar = $_POST['entrar'];
 $senha = md5($_POST['senha']);
-$connect = mysql_connect('nome_do_servidor', 'user_nome' ,'user_email','user_senha');
+$connect = mysql_connect('localhost', 'user_nome' ,'user_email','user_senha');
 $db = mysql_select_db('pi_db');
   if (isset($entrar)) {
 

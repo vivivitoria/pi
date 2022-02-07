@@ -19,7 +19,6 @@ html {
     transform: translate(-50%, -50%);
 }
 
-
 .btn-back{
     font-size:20px;
     padding:10px;
@@ -44,7 +43,7 @@ html {
    
 }
 .btn:hover{
-    background:linear-gradient(#69443C,#3f3931 );
+    background:linear-gradient(#8b716b,#8b716b );
 }
 input, label{
     display:block;
@@ -72,7 +71,7 @@ body{
     width:60%;
     margin-left:auto;
     margin-right:auto;
-    background-color:#fff;
+    background-color:rgba(255, 255, 255, 0.705);
     border-radius:10px;
     padding:25px;
     margin-bottom:30px;
@@ -100,6 +99,16 @@ form{
 label{
     font-weight:bold;
     font-size:.8rem;
+}
+
+div .perfil {
+    padding:10px;
+    font-size:.9rem;
+    margin-bottom:40px; 
+    background-color:#d3beb9;
+    border:none;
+    border-radius:25px;
+    height:50%;
 }
 
 input{

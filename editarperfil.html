@@ -14,7 +14,9 @@
         </div>
         <div class="center" id="main-container">
             <h1>Editar perfil</h1>
-            <form action="" method="post" id="edit-form">
+            <form method="post" id="edit-form" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF "]);?>">
+                <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+
                 <div class="full-box">
                     <label for="email">E-mail:</label>
                     <input type="email" value="" name="user_email" id="email" placeholder="Digite seu e-mail" data-min-length="3">

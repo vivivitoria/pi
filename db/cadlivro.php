@@ -1,10 +1,13 @@
 <?php
+//creates a unique ID with a random number as a prefix - more secure than a static prefix 
+$id = uniqid (rand (),true); echo $c; echo "<br>";
 $nome = $_POST['nome'];
 $genero = $_POST['genero'];
 $ano = $_POST['ano'];
 $autor = $_POST['autor'];
 
 $connect = mysql_connect('nome_do_servidor', 
+`livro_id`,
 'livro_nome' ,
 'livro_genero',
 'livro_ano',
