@@ -24,12 +24,12 @@ $logarray = $array['login'];
 
         if($insert){
           echo"<script language='javascript' type='text/javascript'>
-          alert('Livro cadastrado com sucesso!');window.location.
-          href='login.html'</script>";
+          alert('Livro cadastrado com sucesso!');
+          window.location.href='listar.html'</script>";
         }else{
           echo"<script language='javascript' type='text/javascript'>
-          alert('Não foi possível cadastrar esse livro');window.location
-          .href='cadastro.html'</script>";
+          alert('Não foi possível cadastrar esse livro');
+          window.location.href='cadastro.html'</script>";
         }
       }
 ?>
