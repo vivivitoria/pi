@@ -14,7 +14,7 @@
         </div>
         <div class="center" id="main-container">
             <h1>Meu perfil</h1>
-            <form method="post" id="edit-form" action="db/cadastro.php">
+            <form method="post" id="edit-form" action="db/cadastrodb.php">
                 <div class="full-box">
                     <label class="perfil" for="email">E-mail: <?php print $email ?></label>                    
                 </div>
@@ -23,8 +23,9 @@
                 </div>
 
                 <div class="full-box">
+                    <a href="/editarperfil.html">
                     <input type="button" value="Alterar dados" id="btn-senha" class="btn" onclick="alterarSenha()">
-                    
+                    </a>
                 </div>
             </form>
         </div>
