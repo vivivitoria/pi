@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="login.css">
     <link rel="stylesheet" type="text/css" href="livro.css">
+    <link rel="icon" href="../midia/book-fill.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cidade Literária</title>
 </head>
@@ -18,8 +19,8 @@
             <form class="publish-form" action="#" method="post" id="edit-form">
                 <h2 class="title">Publique seu livro!</h2>
 
-                <label for="imagem">Imagem</label>
-                <input type="file" name="fileupload" accept="image/*">
+                <label id="imageml" for="imagem">Selecione uma imagem</label>
+                <input id="image" type="file" name="fileupload" accept="image/*">
 
                 <div class="input-field">
                     <label for="titulo"></label>
@@ -34,7 +35,7 @@
                 <div class="full-box input-field">
                     <label for="genero"></label>
                     <select required>
-                        <option value="" disabled selected>Gênero</option>
+                        <option id="op" value="" disabled selected>Gênero</option>
                         <option value="fantasia">Fantasia</option>
                         <option value="romance">Romance</option>
                         <option value="aventura">Aventura</option>
@@ -62,8 +63,13 @@
                 </div>
 
                 <div class="input-field">
-                    <input type="radio" name="emprestar" value=""> Emprestar livro
-                    <input type="radio" name="doar" value=""> Doar livro
+                    <input id="radio1" type="checkbox" name="emprestar" value="">
+                    <label for="radio1">Emprestar livro</label>
+                </div>
+
+                <div class="input-field">
+                    <input id="radio2" type="checkbox" name="doar" value="">
+                    <label for="radio2"> Doar livro</label>
                 </div>
 
 

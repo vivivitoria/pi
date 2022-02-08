@@ -189,7 +189,6 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: url(../midia/bglo.png);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
