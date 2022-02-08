@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="livro.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidade Literária</title>
+</head>
+
+<body>
+    <nav class="navbar"></nav>
+    
+    <div class="container center" id="main-container">
+        <div class="forms-container">
+            <form class="publish-form" action="#" method="post" id="edit-form">
+                <h2 class="title">Publique seu livro!</h2>
+
+                <label for="imagem">Imagem</label>
+                <input type="file" name="fileupload" accept="image/*">
+
+                <div class="input-field">
+                    <label for="titulo"></label>
+                    <input type="text" value="" placeholder="Título do livro" name="titulo" id="titulo">
+                </div>
+
+                <div class="input-field">
+                    <label for="autor"></label>
+                    <input type="text" value="" placeholder="Autor do livro" name="autor" id="autor">
+                </div>
+
+                <div class="full-box input-field">
+                    <label for="genero"></label>
+                    <select required>
+                        <option value="" disabled selected>Gênero</option>
+                        <option value="fantasia">Fantasia</option>
+                        <option value="romance">Romance</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="didatico">Didático</option>
+                        <option value="fic-cientifica">Ficção Científica</option>
+                        <option value="drama">Drama</option>
+                        <option value="classico">Clássico</option>
+                        <option value="biografia">Biografia</option>
+                        <option value="hq">HQ</option>
+                        <option value="distopia">Distopia</option>
+                        <option value="contos">Contos</option>
+                        <option value="sobrenatural">Sobrenatural</option>
+                        <option value="terror">Terror</option>
+                    </select>
+                </div>
+
+                <div class="input-field">
+                    <label for="data"></label>
+                    <input type="number" value="" placeholder="Ano de Publicação" name="data" id="data">
+                </div>
+
+                <div class="input-field">
+                    <label for="numero"></label>
+                    <input type="number" value="" placeholder="Número de páginas" name="pagina" id="pagina">
+                </div>
+
+                <div class="input-field">
+                    <input type="radio" name="emprestar" value=""> Emprestar livro
+                    <input type="radio" name="doar" value=""> Doar livro
+                </div>
+
+
+
+                <a href="../list/index.html"><input type="button" value="Publicar" class="btn solid"></a>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
