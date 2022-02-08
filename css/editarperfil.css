@@ -48,7 +48,7 @@ html {
 input, label{
     display:block;
     width:100%;
-
+    border: none;
 }
 
 input:focus, label:focus{
@@ -105,9 +105,8 @@ div .perfil {
     padding:10px;
     font-size:.9rem;
     margin-bottom:40px; 
-    background-color:#d3beb9;
+    background-color:#ffffff;
     border:none;
-    border-radius:25px;
     height:50%;
 }
 
