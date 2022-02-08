@@ -14,14 +14,12 @@
         </div>
         <div class="center" id="main-container">
             <h1>Meu perfil</h1>
-            <form method="post" id="edit-form" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF "]);?>
-                <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-
+            <form method="post" id="edit-form" action="db/cadastro.php">
                 <div class="full-box">
-                    <label class="perfil" for="email">E-mail: <?php echo $email ?></label>                    
+                    <label class="perfil" for="email">E-mail: <?php print $email ?></label>                    
                 </div>
                 <div class="full-box">
-                    <label class="perfil" for="name">Nome: <?php echo $nome ?></label>
+                    <label class="perfil" for="name">Nome: <?php print $nome ?></label>
                 </div>
 
                 <div class="full-box">

@@ -3,11 +3,11 @@
 if (isset($_GET["txtlivro_nome"])) {
     $nome = $_GET["txtlivro_nome"];
     // Conexao com o banco de dados
-    $server = "localhost";
-    $user = "root";
-    $senha = "senha db";
+    $server = "s";
+    $user = "USER_NAME";
+    $senha = "PASSWORD";
     $base = "pi_db";
-    $conexao = mysql_connect($server, $user, $senha) or die("Erro na conexão!");
+    $conexao = mysqli_connect($server, $user, $senha) or die("Erro na conexão!");
     mysql_select_db($base);
     // Verifica se a variável está vazia
     if (empty($nome)) {
